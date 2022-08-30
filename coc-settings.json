@@ -1,0 +1,10 @@
+{
+    "diagnostic.errorSign": "✖",
+    "diagnostic.infoSign": "🛈",
+    "diagnostic.hintSign": "🛈",
+    "vimlsp.filetypes": [
+        "vim"
+    ],
+    "codeLens.enable":true,
+    "coc.source.around.enable": false
+}
