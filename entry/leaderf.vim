@@ -6,7 +6,8 @@ let g:Lf_IgnoreCurrentBufferName = 1
 " popup mode
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
-let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "Monaco" }
+" let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "Monaco" }
+let g:Lf_StlSeparator = { 'left': '', 'right': '' }
 let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 
 " let g:Lf_ShortcutF = "<leader>ff"
@@ -30,16 +31,26 @@ let g:Lf_CtagsFunc = {
   \ }
 
 let g:Lf_GtagsAutoGenerate = 1
-let g:Lf_GtagsGutentags    = 0
-let g:Lf_CacheDirectory    = expand('~')
-let g:Lf_Gtagsconf         = 'C:\Users\wenqin\scoop\apps\global\current\share\gtags\gtags.conf'
 let g:Lf_Gtagslabel        = 'native-pygments'
 
+if has('win32')
+    let g:Lf_Gtagsconf         = 'C:\Users\wenqin\scoop\apps\global\current\share\gtags\gtags.conf'
+endif
+
+" gutentags支持
+" let g:Lf_GtagsGutentags    = 0
+" let g:Lf_CacheDirectory    = expand('~')
+
 noremap <leader>fg  :<C-U><C-R>=printf("Leaderf! gtags" )<CR><CR>
+" 引用
 noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+" 定义
 noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+" 重复最后一次搜索 
 noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+" 下个匹配
 noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
+" 上个匹配
 noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
 noremap <leader>fa :<C-U><C-R>=printf("Leaderf rg ")<CR>
 

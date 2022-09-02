@@ -12,5 +12,5 @@ runtime! entry/coc.vim
 runtime! entry/abbreviations.vim
 runtime! entry/peek.vim
 runtime! entry/leaderf.vim
-runtime! entry/gutentags.vim
+" runtime! entry/gutentags.vim
 runtime! entry/mapping.vim
