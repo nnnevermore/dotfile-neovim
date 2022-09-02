@@ -1,13 +1,13 @@
 " 字体
 if has('nvim')
-	GuiFont! Monaco:h10:cAnsi,Microsoft_YaHei_UI:h10:cGB2312
-	set guifontwide=Microsoft_YaHei_UI:h10
+	GuiFont! Monaco\ For\ Powerline:h11:cAnsi,Microsoft_YaHei_UI:h11:cGB2312
+	set guifontwide=Microsoft_YaHei_UI:h11
 
 	" 关闭丑陋的nvim-qt弹出菜单的样式，改回vim自己的样式"
 	GuiPopupmenu 0
 else
-    set guifont=Monaco:h10:cAnsi,Microsoft_YaHei_UI:h10:cGB2312
-	set guifontwide=Microsoft_YaHei_UI:h10
+    set guifont=Monaco\ For\ Powerline:h11:cAnsi,Microsoft_YaHei_UI:h11:cGB2312
+	set guifontwide=Microsoft_YaHei_UI:h11
 endif
 
 if !has('gui_running')
