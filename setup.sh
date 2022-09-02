@@ -23,3 +23,7 @@ cp -rv entry ${CONFIG_HOME}/
 nvim +checkhealth +PlugInstall
 
 echo "Setup NeoVim Done!"
+
+install(){
+
+}
